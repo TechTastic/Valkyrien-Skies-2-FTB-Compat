@@ -50,6 +50,15 @@ configurations {
     shadowCommon.extendsFrom core
 }
 
+repositories {
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+
 dependencies {
     include(forgeRuntimeLibrary(annotationProcessor(implementation("com.github.LlamaLad7:MixinExtras:0.1.1"))))
 
@@ -132,6 +141,11 @@ dependencies {
     forgeRuntimeLibrary include("com.google.dagger:dagger:2.43.2") { transitive = false }
 
     // endregion
+
+    // FTB Stuffs
+    modCompileOnly("curse.maven:ftb-util-404465:4210935")
+    modCompileOnly("curse.maven:ftb-teams-404468:4229138")
+    modCompileOnly("curse.maven:ftb-chunks-314906:4229120")
 }
 
 processResources {

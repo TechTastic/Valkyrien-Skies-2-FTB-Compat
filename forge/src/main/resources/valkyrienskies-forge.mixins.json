@@ -7,6 +7,7 @@
     "compat.create.MixinBlockBreakingKineticTileEntity",
     "compat.create.MixinBlocks",
     "compat.create.MixinCrushingWheelBlock",
+    "compat.ftb_chunks.MixinClaimedChunkManager",
     "compat.immersivengineering.MixinBlockEntityInventory",
     "compat.thermalexpansion.MixinTileCoFH",
     "feature.forge_interact.MixinIForgePlayer",

@@ -24,6 +24,15 @@ loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
 }
 
+repositories {
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+
 dependencies {
     include(annotationProcessor(implementation("com.github.LlamaLad7:MixinExtras:0.1.1")))
 
@@ -58,6 +67,11 @@ dependencies {
         exclude module: "fastutil"
         exclude module: "kotlin-stdlib-jdk8" // Don't shade kotlin-stdlib-jdk8, even though vs-core depends on it
     }
+
+    // FTB Stuffs
+    modCompileOnly("curse.maven:ftb-util-404465:4210935")
+    modCompileOnly("curse.maven:ftb-teams-404468:4229138")
+    modCompileOnly("curse.maven:ftb-chunks-314906:4229120")
 }
 
 // Copy the VS common access widener to the generated resources folder
